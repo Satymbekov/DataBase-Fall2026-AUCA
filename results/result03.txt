@@ -1,1 +1,24 @@
-pbpaste > results/result11.txt
+postgres=# create table students(
+        id serial primary key,
+        name varchar(100),
+        age int
+);
+
+INSERT INTO students (name, age) 
+VALUES ('Alice', 21), ('Bob', 23); 
+
+SELECT * FROM students;
+
+DROP TABLE students;
+ERROR:  relation "students" already exists
+INSERT 0 2
+ id | name  | age 
+----+-------+-----
+  1 | Alice |  21
+  2 | Bob   |  23
+  3 | Alice |  21
+  4 | Bob   |  23
+(4 rows)
+
+DROP TABLE
+postgres=# 
