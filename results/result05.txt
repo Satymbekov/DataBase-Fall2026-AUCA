@@ -1,0 +1,39 @@
+postgres=# CREATE DATABASE university;
+CREATE DATABASE
+postgres=# \l
+                                                                List of databases
+    Name    |      Owner       | Encoding | Locale Provider |   Collate   |    Ctype    | Locale | ICU Rules |           Access privileges           
+------------+------------------+----------+-----------------+-------------+-------------+--------+-----------+---------------------------------------
+ postgres   | bekzatsatymbekov | UTF8     | libc            | en_US.UTF-8 | en_US.UTF-8 |        |           | 
+ template0  | bekzatsatymbekov | UTF8     | libc            | en_US.UTF-8 | en_US.UTF-8 |        |           | =c/bekzatsatymbekov                  +
+            |                  |          |                 |             |             |        |           | bekzatsatymbekov=CTc/bekzatsatymbekov
+ template1  | bekzatsatymbekov | UTF8     | libc            | en_US.UTF-8 | en_US.UTF-8 |        |           | =c/bekzatsatymbekov                  +
+            |                  |          |                 |             |             |        |           | bekzatsatymbekov=CTc/bekzatsatymbekov
+ university | bekzatsatymbekov | UTF8     | libc            | en_US.UTF-8 | en_US.UTF-8 |        |           | 
+(4 rows)
+
+postgres=# drop database university;
+DROP DATABASE
+postgres=# \l
+                                                                List of databases
+   Name    |      Owner       | Encoding | Locale Provider |   Collate   |    Ctype    | Locale | ICU Rules |           Access privileges           
+-----------+------------------+----------+-----------------+-------------+-------------+--------+-----------+---------------------------------------
+ postgres  | bekzatsatymbekov | UTF8     | libc            | en_US.UTF-8 | en_US.UTF-8 |        |           | 
+ template0 | bekzatsatymbekov | UTF8     | libc            | en_US.UTF-8 | en_US.UTF-8 |        |           | =c/bekzatsatymbekov                  +
+           |                  |          |                 |             |             |        |           | bekzatsatymbekov=CTc/bekzatsatymbekov
+ template1 | bekzatsatymbekov | UTF8     | libc            | en_US.UTF-8 | en_US.UTF-8 |        |           | =c/bekzatsatymbekov                  +
+           |                  |          |                 |             |             |        |           | bekzatsatymbekov=CTc/bekzatsatymbekov
+(3 rows)
+
+postgres=# CREATE DATABASE university;
+CREATE DATABASE
+postgres=# \c postgres
+You are now connected to database "postgres" as user "bekzatsatymbekov".
+postgres=# \c university
+You are now connected to database "university" as user "bekzatsatymbekov".
+university=# drop database university;
+ERROR:  cannot drop the currently open database
+university=# \c postgres
+You are now connected to database "postgres" as user "bekzatsatymbekov".
+postgres=# drop database university;
+DROP DATABASE
