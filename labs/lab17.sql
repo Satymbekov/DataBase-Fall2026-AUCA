@@ -78,17 +78,17 @@ QUOTE '"';
 
 \! cat /tmp/lab17_customers.csv
 
-\! pg_dump -h localhost -p 5432 -U erbolmederbekuulu -d lab17_demo -Fc -f /tmp/lab17_backup.dump
+\! pg_dump -h localhost -p 5432 -U bekzatsatymbekov -d lab17_demo -Fc -f /tmp/lab17_backup.dump
 
 \! pg_restore --list /tmp/lab17_backup.dump
 
-\! pg_dump -h localhost -p 5432 -U erbolmederbekuulu -d lab17_demo -s -f /tmp/lab17_schema.sql
+\! pg_dump -h localhost -p 5432 -U bekzatsatymbekov -d lab17_demo -s -f /tmp/lab17_schema.sql
 
-\! pg_dump -h localhost -p 5432 -U erbolmederbekuulu -d lab17_demo -a -f /tmp/lab17_data.sql
+\! pg_dump -h localhost -p 5432 -U bekzatsatymbekov -d lab17_demo -a -f /tmp/lab17_data.sql
 
 CREATE DATABASE lab17_restore;
 
-\! pg_restore -h localhost -p 5432 -U erbolmederbekuulu -d lab17_restore /tmp/lab17_backup.dump
+\! pg_restore -h localhost -p 5432 -U bekzatsatymbekov -d lab17_restore /tmp/lab17_backup.dump
 
 \c lab17_restore
 
