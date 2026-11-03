@@ -6,8 +6,8 @@ CREATE TABLE students (
 INSERT INTO students (name, email)
 VALUES
     ('Alymbek', 'alymbek@example.com'),
-    ('Timur', 'timur@example.com'),
-    ('Beka', 'beka@example.com');
+    ('Tima', 'tima@example.com'),
+    ('Bekzat', 'bekzat@example.com');
 
 SELECT * FROM students;
 
@@ -23,8 +23,8 @@ postgres=# CREATE TABLE students (
 postgres=# INSERT INTO students (name, email, faculty)
 VALUES
     ('Alymbek', 'alymbek@example.com', 'COMSEH'),
-    ('Timur', 'timur@example.com', 'MED'),
-    ('Beka', 'beka@example.com', 'MAT');
+    ('Tima', 'tima@example.com', 'MED'),
+    ('Bekzat', 'bekzat@example.com', 'MAT');
 
 SELECT * FROM students;
 
